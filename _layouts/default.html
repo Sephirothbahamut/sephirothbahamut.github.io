@@ -3,15 +3,48 @@
 		<head>
 			<title>{{ page.title }}</title>
 			<link rel="stylesheet" type="text/css" href="/website/css/main.css"/>
+			
+			<link href="http://3rin.gs/tengwar/packages/tengwar@0a896ef/tengwar-parmaite.css" rel="stylesheet" type="text/css">
+		
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		</head>
 		<body>
 			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
+	    		<ul class = "navbar navbar_ul">
+					<li class="navbar_li">
+						<a class="navbar_button" href="/"> <i class="fa fa-home"></i> Home </a>
+					</li>
+					
+					<li class="navbar_li">
+						<div class="dropdown">
+							<a class="navbar_dropdown_button" href="/game_maker"> Game Maker </a>
+							<div class="dropdown-content">
+								<a href="/construction"> Games </a>
+								<a href="/construction"> Software </a>
+								<a href="/construction"> Libraries </a>
+							</div>
+						</div>
+					</li>
+					
+					<li class="navbar_li">
+						<div class="dropdown">
+							<a class="navbar_dropdown_button" href="/cpp/"> C++ </a>
+							<div class="dropdown-content">
+								<a href="/construction"> Games </a>
+								<a href="/construction"> Software </a>
+								<a href="/construction"> Libraries </a>
+							</div>
+						</div>
+					</li>
+					
+					<li class="navbar_li">
+						<a class="navbar_button" href="/construction"> About me </a>
+					</li>
+					
+					<li class="navbar_li">
+						<a class="navbar_button" href="/test"> Random tests </a>
+					</li>
+				</ul>
 			</nav>
 			<div class="container">
 			
@@ -19,10 +52,23 @@
 			
 			</div><!-- /.container -->
 			<footer>
-	    		<ul>
-	        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-				</ul>
+	    		<div class="footer">
+					<!--div>
+					<i class="fa fa-windows"/>
+					<i class="fa fa-linux"/>
+					<i class="fa fa-apple"/>
+					</div>
+					<div>
+					<i class="fa fa-edge"/>
+					<i class="fa fa-internet-explorer"/>
+					</div>
+					<div>
+					<i class="fa fa-chrome"/>
+					<i class="fa fa-firefox"/>
+					<i class="fa fa-opera"/>
+					<i class="fa fa-safari"/>
+					</div-->
+				</div>
 			</footer>
 		</body>
 	</html>
