@@ -181,7 +181,7 @@ h3
 	float: left;
 	}
 
-.dropbtn 
+.navbar_dropdown_button, .dropbtn 
 	{
 	display: inline-block;
 	color: white;
