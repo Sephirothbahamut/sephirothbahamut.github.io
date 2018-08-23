@@ -110,6 +110,20 @@ a:visited
 	{
 	color: var(--c_text_link_opened);
 	}
+
+h1	
+	{
+	text-shadow: 0px 0px 6px var(--c_text_shadow);
+	}
+h2	
+	{
+	text-shadow: 0px 0px 5px var(--c_text_shadow);
+	}
+h3	
+	{
+	text-shadow: 0px 0px 5px var(--c_text_shadow);
+	}
+
 	
 /*==============================================================*/
 /*=====================* LIST *=================================*/
