@@ -101,10 +101,11 @@ p
 	
 blockquote
 	{
-	padding-right: 8px;
-	padding-top: 8px;
-	padding-left: 12px;
-	padding-bottom: 8px;
+	margin-right: 8;
+	margin-top: 8;
+	margin-left: 8;
+	margin-bottom: 8;
+	padding-left: 8px;
 	border-left: 1px var(--c_text);
 	border-style: dotted;
 	font-style: italic;
