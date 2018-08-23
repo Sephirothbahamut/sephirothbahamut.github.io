@@ -36,7 +36,7 @@ caption, table, td, tr{
 html, body
 	{
 	background-color: var(--c_outer_background);
-	font-size: 16px;
+	font-size: 18px;
 	color: var(--c_text);
 	
 	height: 100%;
@@ -85,7 +85,7 @@ html, body
 	line-height: 120%;
 	padding: 12px;
 	text-decoration: none;
-	text-shadow: 0px 0px var(--c_text_shadow);
+	text-shadow: 0px 0px 1px var(--c_text_shadow);
 	
 	border-radius: 6px;
 	box-shadow: inset 0px 1px rgba(255,255,255,0.4), 0px 1px 2px rgba(0,0,0,0.2);
@@ -101,8 +101,12 @@ p
 	
 blockquote
 	{
-	padding-left: 10px;
+	padding-right: 8px;
+	padding-top: 8px;
+	padding-left: 12px;
+	padding-bottom: 8px;
 	border-left: 1px var(--c_text);
+	border-style: dotted;
 	font-style: italic;
 	}
 
