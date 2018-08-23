@@ -174,7 +174,6 @@ h3
 	padding: 0;
 	overflow: hidden;
 	background-color: #333;
-	opaciti: 0.95;
 	}
 
 .navbar_li
@@ -204,6 +203,8 @@ li.dropdown
 	
 .dropdown-content 
 	{
+	opaciti: 0.9;
+	
 	border-left: thick solid var(--c_text_background);
 	
 	display: none;
