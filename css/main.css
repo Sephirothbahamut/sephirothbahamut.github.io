@@ -181,14 +181,14 @@ h3
 	float: left;
 	}
 
-.navbar_dropdown_button, .dropbtn 
+/*.navbar_dropdown_button, .dropbtn 
 	{
 	display: inline-block;
 	color: white;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	}
+	}*/
 
 li a:hover, .dropdown:hover .dropbtn 
 	{
