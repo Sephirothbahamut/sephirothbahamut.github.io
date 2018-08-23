@@ -1,3 +1,4 @@
 name: Barnack Website
 markdown: kramdown
 url: https://sephirothbahamut.github.io
+theme: jekyll-theme-hacker
