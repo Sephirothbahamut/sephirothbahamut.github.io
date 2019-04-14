@@ -14,7 +14,7 @@ title: Barnack - C++
 
 <div class="box"">
 	<p>
-	GraphMaker is a program which lets you build simple graphs, (oriented, non-oriented or even mixed) with ease.
+	GraphMaker is a program that lets you build simple graphs, (oriented, non-oriented or even mixed) with ease.
 	</p>
 	<p>
 	The whole program revolves around a dynamic graph data structure which can be loaded/saved, altered, and used to test algorithms (more on that later). The dynamic graph also allows users to save and load custom variables into both nodes and arcs.
@@ -24,18 +24,18 @@ title: Barnack - C++
 	</p>
 	<h3> CLI Mode </h3>
 	<p>
-	The CLI mode supports a custom C-like scripting language (a subset of the C++ grammar), using which the user can interact with graphs through functions and classes that are built in the scripting language. (Yes, i actually found it more interesting to write a C-like parser and interpreter than to just support lua scripts). </br>
+	The CLI mode supports a custom C-like scripting language (a subset of the C++ grammar), with which the user can interact with graphs through functions and classes that are built in the scripting language. (Yes, i actually found it more interesting to write a C-like parser and interpreter than to just support lua scripts). </br>
 	For instance, in CLI mode it is possible to write a cycle to create N nodes and connect them to each other.
 	</p>
 	<h3> GUI Mode </h3>
 	<p>
-	The GUI mode will let the user do <b>most</b> of the things possible through the command line. The main advantage is visualizing the graph in your screen with all nodes and variables (you can actually chose which variables will be shown graphically, and hide the rest).
+	The GUI mode will let the user do <b>most</b> of the things possible through the command line. The main advantage is visualizing the graph in your screen with all nodes and variables (you can actually chose which variables will be shown and hide the rest).
 	</p>
 </div>
 <div class="box"">
 	<h3> Algorithms Testing </h3>
 	<p>
-	The biggest feature of Graph Maker, which is the reason i translated the whole program to C++ and wrote an interpreter, is allowing users to test custom algorithms and visually see (if GUI mode is being used) how the algorithm navigates through a graph. Algorithms will be a special type of script written in the same mentioned language but with some constraints (for instance, a "visit" function must be defined that takes a node as an argument). When running the algorithm, Graph Maker will take care of colouring arcs and nodes per each "visit" call accordingly to what's going on.
+	The biggest feature of Graph Maker, which is the reason i translated the whole program to C++ and wrote an interpreter, is allowing users to test custom algorithms and visually see (if GUI mode is being used) how the algorithm navigates through a graph. Algorithms will be a special type of script written in the same mentioned language but with some constraints (for instance, a "visit" function must be defined that takes a node as an argument). When running an algorithm in GUI mode, Graph Maker will take care of colouring arcs and nodes per each "visit" call accordingly to what's going on.
 	When an Algorithm is completed in both GUI and CLI mode, a vague esteem of its complexity is shown (still thinking about how to do that).
 	</p>
 
@@ -45,36 +45,52 @@ title: Barnack - C++
 <hr/>
 <h2> Current State </h2>
 <div class="box">
+	<h3> Dynamic Graph </h3>
 	<ul>
-		<li><span style="color: #00ccff;">Add as many nodes and arcs between nodes as you wish. Multiple arcs between the same two nodes are supported.</span></li>
-		<li><span style="color: #00ccff;">Move selected items around with grid snapping.</span></li>
-		<li><span style="color: #00ccff;">Customize grid snap size for both axis (x and y) with the value you prefer.</span></li>
-		<li><span style="color: #00ccff;">Swap directions of oriented arcs</span></li>
-		<li><span style="color: #00ccff;">Highlight all arcs and nodes which can be reached from a certain node</span></li>
-		<li><span style="color: #00ccff;">Save/open graphs</span></li>
-		<li><span style="color: #00ccff;">Export graphs as .txt files in various formats:</span>
+		<li><span style="color: #00ccff;">Load Graph.</span></li>
+		<li><span style="color: #00ccff;">Save Graph.</span></li>
+		<li><span style="color: #00ccff;">Add nodes.</span></li>
+		<li><span style="color: #00ccff;">Add oriented arcs.</span></li>
+		<li><span style="color: #00ccff;">Add non-oriented arcs.</span></li>
+		<li><span style="color: #00ccff;">Remove nodes (with all connected arcs).</span></li>
+		<li><span style="color: #00ccff;">Remove arcs.</span></li>
+		<li><span style="color: #00ccff;">Swap oriented arc direction.</span></li>
+		<li><span style="color: #00ccff;">Add a variable with a custom name to all nodes in the graph (a default value will be applied to all current and future nodes).</span></li>
+		<li><span style="color: #00ccff;">Add a variable with a custom name to all arcs in the graph (a default value will be applied to all current and future arcs).</span></li>
+		<li><span style="color: #00ccff;">Add a variable with a custom name a specific node.</span></li>
+		<li><span style="color: #00ccff;">Add a variable with a custom name a specific arc.</span></li>
+		<li><span style="color: #00ccff;">Read variable value from node.</span></li>
+		<li><span style="color: #00ccff;">Read variable value from arc.</span></li>
+		<li><span style="color: #00ccff;">Interface for the script/algorithm interpreter to iterate all nodes or arcs connected to a specific node.</span></li>
+		<li><span style="color: #00ccff;"></span></li>
+	</ul>
+	<h3> CLI Mode </h3>
 	<ul>
-		<li><span style="color: #00ccff;">Adjacency vector</span></li>
-		<li><span style="color: #00ccff;">Adjacency matrix</span></li>
-		<li><span style="color: #00ccff;">Arcs list</span></li>
+		<li><span style="color: #ff6600;">Parse and interpret commands.</span></li>
+		<li><span style="color: #00ccff;">Open GUI Window</span></li>
 	</ul>
-	</li>
-		<li><span style="color: #00ccff;">Execute an animated visit simulation with custom time delays</span>
+	<h3> GUI Mode </h3>
 	<ul>
-		<li><span style="color: #00ccff;">DFS</span></li>
-		<li><span style="color: #00ccff;">BFS</span></li>
+		<li><span style="color: #00ccff;">Graph visualization.</span></li>
+		<li><span style="color: #00ccff;">View movement with mouse and kebyoard.</span></li>
+		<li><span style="color: #00ccff;">View zoom and unzoom.</span></li>
+		<li><span style="color: #00ccff;">View rotation.</span></li>
+		<li><span style="color: #00ccff;">Reference grid.</span></li>
+		
+		<li><span style="color: #00ccff;">Add nodes.</span></li>
+		<li><span style="color: #00ccff;">Add arcs.</span></li>
+		<li><span style="color: #00ccff;">Remove nodes.</span></li>
+		<li><span style="color: #00ccff;">Remove arcs.</span></li>
+		<li><span style="color: #00ccff;">Move nodes.</span></li>
+		<li><span style="color: #00ccff;">Multiple nodes selection.</span></li>
+		
+		<li><span style="color: #ff6600;">Actual interface with menus and buttons.</span></li>
+		<li><span style="color: #00ccff;">Keyboard shortcuts for all mentioned actions.</span></li>
+		
+		<li><span style="color: #00ccff;">Dynamic recoloring for algorithm simulation.</span></li>
+		<li><span style="color: #00ccff;">Variables visualization.</span></li>
 	</ul>
-	</li>
-		<li><span style="color: #00ccff;">Customize colors for nodes, arcs, visited items, selected items, background, and grid.</span></li>
-		<li><span style="color: #00ccff;">Add/show/hide up to three custom variables to your nodes and/or your arcs. </span></li>
-		<li><span style="color: #00ccff;">Change custom variable's value dynamically when executing a simulated visit, like set/increase/decrease a certain variable by a certain value.</span></li>
-		<li><span style="color: #ff6600;">Add conditions to custom variables changing during simulated visits. (suspended, partially available)</span></li>
-	</ul>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/tkshmyjqwR4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 	
 </div>
 
 <hr/>
-<h2> Download 
-	<a href="https://miniurl.io/st?api=a6e6e1293aa28e3c5124c5821f63695c528c1116&url=https://mega.nz/#!b4YUxQBY!OvQagdctwtjEtdWhcpm3purgCIQdOtePvHQMLaFm60Y"><i class="fas fa-download"></i></a> 
-</h2>
