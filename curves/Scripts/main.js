@@ -65,4 +65,5 @@ function update_sliders() {
             .generate().append(sliders_div);
     }
 }
+update_sliders();
 //# sourceMappingURL=main.js.map
