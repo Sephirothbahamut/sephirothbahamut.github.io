@@ -14,10 +14,18 @@
 
 	<canvas style="border: 1px solid gray;" id="canvas" width="800" height="600" ondragstart="return false"></canvas>
 
-	<label>Show Control</label>
+	<br />
+	<label>Show Control:</label>
 	<input type="checkbox" id="checkbox_show_points" />
+
+	<br />
+	<label>Force gluing condition:</label>
+	<input type="checkbox" id="checkbox_force_gluing_condition" />
+
+	<br />
 	<button id="button_add_points">Add points</button>
 
+	<br />
 	<script type="application/javascript">
 		let dev = {};
 		Promise.all([

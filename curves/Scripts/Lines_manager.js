@@ -14,7 +14,7 @@ export class Lines_manager {
         this.from = new Vector2(0, 0);
         this.arr = [];
         this.beziers = [];
-        this.glued_dragging = true;
+        this.glued_dragging = false;
         this.arr.push(new Vector2(0, 0));
         this.bspline = new Bspline(this.arr);
         this.nurbs = new Nurbs(this.arr);

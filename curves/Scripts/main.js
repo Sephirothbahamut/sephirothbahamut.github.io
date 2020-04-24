@@ -3,6 +3,7 @@ import { Vector2 } from "./Vector2.js";
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const checkbox_show_points = document.getElementById("checkbox_show_points");
+const checkbox_force_gluing_condition = document.getElementById("checkbox_force_gluing_condition");
 const button_add_points = document.getElementById("button_add_points");
 canvas.oncontextmenu = function (e) { e.preventDefault(); };
 const lm = new Lines_manager();
@@ -28,6 +29,10 @@ checkbox_show_points.addEventListener("change", event => {
     const tmp = event.target;
     draw_points = tmp.checked;
     draw(ctx);
+});
+checkbox_force_gluing_condition.addEventListener("change", event => {
+    const tmp = event.target;
+    lm.glued_dragging = tmp.checked;
 });
 button_add_points.addEventListener("click", function () {
     lm.add_points();
