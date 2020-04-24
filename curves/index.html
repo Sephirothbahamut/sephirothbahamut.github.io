@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
+	<title>Bezier</title>
+	<link rel="stylesheet" href="Styles/app.css" type="text/css" />
+	<link rel="stylesheet" href="Styles/slider.css" type="text/css" />
+
+
+</head>
+<body style="background-color:black;">
+	<h1>Bezier spline - Parametric spline</h1>
+	<h2>An interactive comparison</h2>
+
+	<canvas style="border: 1px solid gray;" id="canvas" width="800" height="600" ondragstart="return false"></canvas>
+
+	<label>Show Control</label>
+	<input type="checkbox" id="checkbox_show_points" />
+	<button id="button_add_points">Add points</button>
+
+	<script type="application/javascript">
+		let dev = {};
+		Promise.all([
+			import('./Scripts/Vector2.js'),
+			import('./Scripts/Bezier.js'),
+			import('./Scripts/Bspline.js'),
+			import('./Scripts/Nurbs.js'),
+			import('./Scripts/Line_strip.js'),
+			import('./Scripts/main.js')
+			]).then(data =>
+			{
+			dev = data[5].get();
+			dev.Vector2 = data[0];
+			dev.Bezier = data[1];
+			dev.Bspline = data[2];
+			dev.Nurbs = data[3];
+			dev.Line_strip = data[4];
+
+			console.log("The following classes are now available:");
+			console.log(dev.Vector2);
+			console.log(dev.Bezier);
+			console.log(dev.Bspline);
+			console.log(dev.Nurbs);
+			console.log(dev.Line_strip);
+			console.log("The global line manager is available as \"dev.lm\".");
+			console.log("Contex refresh can be forced calling \"dev.draw();\".")
+			});
+	</script>
+</body>
+</html>
