@@ -20,7 +20,7 @@ export class Nurbs {
         this.knots.resize(this.cp.size(), 0);
         this.knots.resize(this.cp.size() * 2, 1);
         //weights
-        this.weights.resize(this.cp.size(), 2);
+        this.weights.resize(this.cp.size(), 1);
     }
     // ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== METHODS
     get_cp(index) { return this.cp[index]; }
