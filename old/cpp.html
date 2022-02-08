@@ -1,0 +1,50 @@
+---
+layout: default
+title: Barnack - C++
+---
+		
+		
+<script>  
+function hide_sublist(obj, parent) 
+	{
+	//debugger
+	var x = document.getElementById(obj);
+	if (x.style.display === 'none') 
+		{
+		x.style.display = 'block';
+		parent.classList.add('arrow-down')
+		}
+	else 
+		{
+			x.style.display = 'none';
+			parent.classList.remove('arrow-down')
+		}
+	}
+</script>
+
+<h1>C++</h1>
+
+<div class="box">
+	Welcome to the C++ section of the website. C++ is by far my favourite programming language.
+</div>
+<h2> Content </h2>
+
+<div class="box">
+	<ul>
+		<li onclick="hide_sublist('sublist_games')"><a> Games </a></li>
+		<ul id="sublist_games">
+		</ul>
+		
+		<li onclick="hide_sublist('sublist_software')"><a> Software </a></li>
+		<ul id="sublist_software">
+			<li><a href="/cpp/software/sidebar"> Windows SideBar </a> <i style="color: var(--c_ok)" class="fa fa-windows"></i></li>
+			<li><a href="/cpp/software/graph_maker"> Graph Maker </a> <i style="color: var(--c_ok)" class="fa fa-windows"></i></li>
+		</ul>
+		
+		<li onclick="hide_sublist('sublist_libraries')"><a> Libraries </a></li>
+		<ul id="sublist_libraries">
+			<li><a href="/cpp/libraries/adv_getline"> Advanced Getline </a> <i style="color: var(--c_ok)" class="fa fa-windows"></i> <i style="color: var(--c_mid)" class="fa fa-linux"></i> <i style="color: var(--c_no)" class="fa fa-apple"></i></li>
+			<li><a href="/cpp/libraries/particles" style="text-decoration: line-through"> Particle System (SFML) </a> <i style="color: var(--c_mid)" class="fa fa-windows"></i> <i style="color: var(--c_mid)" class="fa fa-linux"></i> <i style="color: var(--c_mid)" class="fa fa-apple"></i></li>
+		</ul>
+	</ul>
+</div>

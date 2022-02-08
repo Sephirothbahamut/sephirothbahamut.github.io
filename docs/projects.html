@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<script src="scripts/header.js"></script>
+</head>
+<body>
+	<div class="tabs" id="tabs"></div>
+
+	<div class="container">
+		<div class="content">
+			<p>Here is a list of my projects</p>
+
+			<toggle-area>
+				<toggle-button class="title_container">
+					<h2>Videogames and videogame related tools</h2>
+				</toggle-button>
+
+				<toggle-content>
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>Random Map Generation Framework</h4>
+							<h5>C# / Unity Utility</h5>
+						</toggle-button>
+						<toggle-content>
+							<p>
+								A small framework to setup random map generation in a project and allow for straightforward readability oriented Random Map Scripts.
+							</p>
+							<a href="https://github.com/Sephirothbahamut/RMS_for_unity"><i class="fa fa-github"></i> Project </a>
+						</toggle-content>
+					</toggle-area>
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>Golfzier</h4>
+							<h5>C# / Unity Game</h5>
+						</toggle-button>
+						<toggle-content>
+							<p>
+								A Videogame developed for my Computational Geometry course exam. It's a golf game that uses Bezier surfaces for terrain generation and manipulation.
+								The player moves the ball by modifying the terrain.
+							</p>
+							<br />
+							<a href="https://github.com/Sephirothbahamut/Golfzier3"><i class="fa fa-github"></i> Project </a>
+							<br />
+							<a href="https://github.com/Sephirothbahamut/GeoComp_website"><i class="fa fa-github"></i> Website Source </a>
+							<br />
+							<a href="https://lukedege.github.io/GolfzierWebpage/"><i class="fa fa-globe"></i> Website (Italian) </a>
+						</toggle-content>
+					</toggle-area>
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>Alexandria 51</h4>
+							<h5>GML / Game Maker / LaTeX</h5>
+						</toggle-button>
+						<toggle-content>
+							<p>
+								Documentation and prototype for a theoretical game made for an university exam. It's a turn based tabletop-like multiplayer game, with some social elements
+								and with real time puzzles between each turn, which have side effects in the ongoing match.
+							</p>
+							<a href=""><i class="fa fa-github"></i> <del>Project</del> (Currently private) </a>
+							<br/>
+							<a href="https://github.com/lukedege/DyingHamstersDocs"><i class="fa fa-latex"></i> Documentation </a>
+						</toggle-content>
+					</toggle-area>
+				</toggle-content>
+			</toggle-area>
+
+			<toggle-area>
+				<toggle-button class="title_container">
+					<h2>Programming and utility tools</h2>
+				</toggle-button>
+
+				<toggle-content>
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>CPP_Utilities</h4>
+							<h5>C++20</h5>
+						</toggle-button>
+						<toggle-content>
+							<p>
+								A collection of C++ utility classes and functions, under the namespace "utils". It contains data structures, standard containers cout, coloured cout (on Windows only), mathematical utilities like a vec2 class, angles and transforms, an asynchronous logger and much more.
+								<br />
+								In my first attempt to make a 2D game engine, I started collecting some classes on the side, together with some other utilities I found out I kept reusing in my code in different projects.
+								When I finally scrapped the game engine, I decided to keep some of the data structures written for it.
+								The collection grew over time, to the state of today; I'm still actively adding funcitonality to it.
+								I'm particularly proud of my <a href="https://github.com/Sephirothbahamut/utils/blob/master/include/utils/tracking.h">tracking_ptr</a>, a smart observer pointer which never loses its target, even when that target moves in memory.
+							</p>
+							<a href="https://github.com/Sephirothbahamut/utils"><i class="fa fa-github"></i> Project </a>
+						</toggle-content>
+					</toggle-area>
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>Incredibly Inefficient Game Engine</h4>
+							<h5>C++17 / SFML</h5>
+						</toggle-button>
+						<toggle-content>
+							<p>
+								Hopefully not as inefficient as the name suggests, this is my third attempt to make a 2D engine from scratch, cumulating what I've learnt with the previous 2 versions.
+								It's far from being finished, and I doubt I'll ever finish it; still I enjoy working on it and feel like it's a nice learning process.
+								Plus it gives me plenty of chances to ask smart (hopefully) questions to C++ pros.
+
+								In the current version I'm still undecided about which direction to go for colliders; I'm considering limiting the engine to few shapes, no arbitrary polygon,
+								and moving collision detection to CUDA.
+							</p>
+							<br />
+							<a href="https://github.com/Sephirothbahamut/IIGE"><i class="fa fa-github"></i> Project </a>
+						</toggle-content>
+					</toggle-area>
+
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>Plotter</h4>
+							<h5>C++17 / C# / C++CLI / SFML / LibreHardwareMonitorLib</h5>
+						</toggle-button>
+						<toggle-content>
+							<p>
+								Tired of monitoring software that is flat looking, lacks dark themes, and/or only shows plots in tiny little areas, I decided to make my own resource monitor.
+								The looks are extremely customizable, but getting started is a bit slow.
+								You first have to get a list of the hardware IDs of your machine that are supported by LibreHardwareMonitorLib (output on console when Plotter is launched).
+								Then you need to create a script which defines your UI. "Plotter_data.txt" is the one working on my machine, and it's fully commented, giving all the
+								information needed to modify it to fit your own machine.
+								TODO Github readme.
+							</p>
+							<br />
+							<a href="https://github.com/Sephirothbahamut/Plotter"><i class="fa fa-github"></i> Project </a>
+						</toggle-content>
+					</toggle-area>
+
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>Graph Maker</h4>
+							<h5>C++ / SFML</h5>
+						</toggle-button>
+						<toggle-content>
+							<p>
+								A program I made originally in Game Maker to have a simple visualization of algorithms during my algorithms and data structure course at university.
+								As it usually happens with me, it exploded in features.
+								<br />
+								Now it is a Graph editor and visualizer, with file inport and export, plus AngelScript support that lets users run completely arbitrary algorithms written in
+								AngelScript on the currently loaded graph. Properly written navigation algorithms will not only run on the graph, but also show in real time with color changes and lines
+								animations how the graph is being visited.
+								<br />
+								Originally I planned writing an interpreter for an ad-hoc C-like language for the purpose, together with a course mate. We started it, but stopped when we arrived at implementing classes in our language.
+								I've then decided to switch to AngelScript. Our old parser is in the "Craph" project mentioned later.
+							</p>
+							<br />
+							<a href="https://github.com/Sephirothbahamut/Graph-Maker"><i class="fa fa-github"></i> Project </a>
+						</toggle-content>
+					</toggle-area>
+
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>CUDA Particles</h4>
+							<h5>C++17 / SFML / CUDA</h5>
+						</toggle-button>
+						<toggle-content>
+							<p>
+								A gravitational n-body simulation which compares performance between CPU in sequential mode, CPU in parallel mode, GPU in parallel without smem, and GPU in parallel with smem.
+							</p>
+							<br />
+							<a href="https://github.com/Sephirothbahamut/CUDA_Particles"><i class="fa fa-github"></i> Project </a>
+						</toggle-content>
+					</toggle-area>
+
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>Image Viewer</h4>
+							<h5>C++17 / SFML</h5>
+						</toggle-button>
+						<toggle-content class="box">
+							<p>
+								Since Windows 10's built in photo viewer takes ages to load, and all the image viewers I could find came with some unnecessary fluff, I said "fine, I'll do it myself".
+								It doesn't do anything fancy at all. It just opens pictures, zooms in and out, scrolls to next and previous files, and lets you drag the image on the window.
+								I'm planning making it a borderless draggable window, so that everything of the space it takes is dedicated to displaying the picture, no borders, no bars.
+							</p>
+							<br />
+							<a href="https://github.com/Sephirothbahamut/Image-Viewer"><i class="fa fa-github"></i> Project </a>
+						</toggle-content>
+					</toggle-area>
+
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>SideBar</h4>
+							<h5>C++17 / SFML</h5>
+						</toggle-button>
+						<toggle-content>
+							<p>
+								A sidebar for windows that auto-hides, with an analog clock (I can't live without one), fancy particles in the background, window transparency,
+								and which can fit an arbitrary amount of buttons with custom labels and actions.
+							</p>
+							<br />
+							<a href="https://github.com/Sephirothbahamut/SideBar"><i class="fa fa-github"></i> Project </a>
+						</toggle-content>
+					</toggle-area>
+
+					<toggle-area>
+						<toggle-button class="title_container">
+							<h4>Craph</h4>
+							<h5>C++17</h5>
+						</toggle-button>
+						<toggle-content>
+							<p>
+								A definitely unfinished and unpolished attempt at making a C-like language interpreter. It was an experiment I started with a coursemate years ago, but regardless of the outcome, it was a worthy learning process.
+								The few things that are implemented (local variables, scopes, function declarations, return copy, pass by copy and pass by reference) all work fine; we stopped before adding classes because the complexity was exploding.
+							</p>
+							<br />
+							<a href="https://github.com/Sephirothbahamut/Craph"><i class="fa fa-github"></i> Project </a>
+						</toggle-content>
+					</toggle-area>
+				</toggle-content>
+			<toggle-area />
+		</div>
+	</div>
+</body>
+</html>

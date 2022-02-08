@@ -1,0 +1,35 @@
+---
+layout: default
+title: Barnack - C++
+---
+<h1>Particle System</h1>
+<div class = "box text">
+	<h2 style="color: var(--c_no)">Attention:</h2>
+	<p>
+		This project is likely to be abandoned.
+	</p>
+</div>
+<div class = "box text">
+	<p>
+		This is my first attempt at creating a particles effect in c++<br/>
+		It's fixed-step dependent, but can be made dynamic easily.
+		In this system, particles are supposed to be created in random positions within a certain area, called "generator".
+		You can set the base values for various particles properties, as well as an offset which will be used to randomize
+		each single particle.
+	</p>
+</div>
+<div class = "box text">
+	These are the properties which can be customized:
+	<ul>
+		<li>Size scale (both x and y)</li>
+		<li>Base speed</li>
+		<li>Acceleration/deceleration over time</li>
+		<li>Lifetime (in steps)</li>
+		<li>Direction</li>
+	</ul>
+	<p>
+		Each property can have an offset which will used to randomize values.
+		For example, if base speed is 10, and the offset is 2, the particle generator will
+		create particles which speed is equal to 8-12 units per step.
+	</p>
+</div>
